@@ -1,0 +1,120 @@
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+import { isJqError, maybeFilter } from 'fortnox-mcp-wrapper-mcp/filtering';
+import { Metadata, asErrorResult, asTextContentResult } from 'fortnox-mcp-wrapper-mcp/tools/types';
+
+import { Tool } from '@modelcontextprotocol/sdk/types.js';
+import FortnoxMcpWrapper from 'fortnox-mcp-wrapper';
+
+export const metadata: Metadata = {
+  resource: 'number_3.accounts',
+  operation: 'write',
+  tags: [],
+  httpMethod: 'post',
+  httpPath: '/3/accounts',
+  operationId: '1_create_1',
+};
+
+export const tool: Tool = {
+  name: 'create_number_3_accounts',
+  description:
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nThe created account will be returned if everything succeeded, if there was any problems an error will be returned.\n\n# Response Schema\n```json\n{\n  $ref: '#/$defs/fortnox_account_single_item_wrap',\n  $defs: {\n    fortnox_account_single_item_wrap: {\n      type: 'object',\n      properties: {\n        Account: {\n          type: 'object',\n          properties: {\n            Description: {\n              type: 'string'\n            },\n            Number: {\n              type: 'integer'\n            },\n            '@url': {\n              type: 'string'\n            },\n            Active: {\n              type: 'boolean'\n            },\n            BalanceBroughtForward: {\n              type: 'number'\n            },\n            BalanceCarriedForward: {\n              type: 'number'\n            },\n            CostCenter: {\n              type: 'string'\n            },\n            CostCenterSettings: {\n              type: 'string',\n              enum: [                'ALLOWED',\n                'MANDATORY',\n                'NOTALLOWED'\n              ]\n            },\n            OpeningQuantities: {\n              type: 'array',\n              items: {\n                type: 'object',\n                properties: {\n                  Balance: {\n                    type: 'integer'\n                  },\n                  Project: {\n                    type: 'string'\n                  }\n                }\n              }\n            },\n            Project: {\n              type: 'string'\n            },\n            ProjectSettings: {\n              type: 'string',\n              enum: [                'ALLOWED',\n                'MANDATORY',\n                'NOTALLOWED'\n              ]\n            },\n            QuantitySettings: {\n              type: 'string',\n              enum: [                'ALLOWED',\n                'MANDATORY',\n                'NOTALLOWED'\n              ]\n            },\n            QuantityUnit: {\n              type: 'string'\n            },\n            SRU: {\n              type: 'integer'\n            },\n            TransactionInformation: {\n              type: 'string'\n            },\n            TransactionInformationSettings: {\n              type: 'string',\n              enum: [                'ALLOWED',\n                'MANDATORY',\n                'NOTALLOWED'\n              ]\n            },\n            VATCode: {\n              type: 'string'\n            },\n            Year: {\n              type: 'integer'\n            }\n          },\n          required: [            'Description',\n            'Number'\n          ]\n        }\n      }\n    }\n  }\n}\n```",
+  inputSchema: {
+    type: 'object',
+    properties: {
+      financialyear: {
+        type: 'integer',
+        description: 'financial year to create account against',
+      },
+      Account: {
+        $ref: '#/$defs/fortnox_account_payload',
+      },
+      jq_filter: {
+        type: 'string',
+        title: 'jq Filter',
+        description:
+          'A jq filter to apply to the response to include certain fields. Consult the output schema in the tool description to see the fields that are available.\n\nFor example: to include only the `name` field in every object of a results array, you can provide ".results[].name".\n\nFor more information, see the [jq documentation](https://jqlang.org/manual/).',
+      },
+    },
+    required: [],
+    $defs: {
+      fortnox_account_payload: {
+        type: 'object',
+        properties: {
+          Description: {
+            type: 'string',
+          },
+          Number: {
+            type: 'integer',
+          },
+          Active: {
+            type: 'boolean',
+          },
+          BalanceBroughtForward: {
+            type: 'number',
+          },
+          CostCenter: {
+            type: 'string',
+          },
+          CostCenterSettings: {
+            type: 'string',
+            enum: ['ALLOWED', 'MANDATORY', 'NOTALLOWED'],
+          },
+          OpeningQuantities: {
+            type: 'array',
+            items: {
+              $ref: '#/$defs/fortnox_account_payload_opening_quantities',
+            },
+          },
+          Project: {
+            type: 'string',
+          },
+          ProjectSettings: {
+            type: 'string',
+            enum: ['ALLOWED', 'MANDATORY', 'NOTALLOWED'],
+          },
+          SRU: {
+            type: 'integer',
+          },
+          TransactionInformation: {
+            type: 'string',
+          },
+          TransactionInformationSettings: {
+            type: 'string',
+            enum: ['ALLOWED', 'MANDATORY', 'NOTALLOWED'],
+          },
+          VATCode: {
+            type: 'string',
+          },
+        },
+        required: ['Description', 'Number'],
+      },
+      fortnox_account_payload_opening_quantities: {
+        type: 'object',
+        properties: {
+          Balance: {
+            type: 'integer',
+          },
+          Project: {
+            type: 'string',
+          },
+        },
+      },
+    },
+  },
+  annotations: {},
+};
+
+export const handler = async (client: FortnoxMcpWrapper, args: Record<string, unknown> | undefined) => {
+  const { jq_filter, ...body } = args as any;
+  try {
+    return asTextContentResult(await maybeFilter(jq_filter, await client.number3.accounts.create(body)));
+  } catch (error) {
+    if (error instanceof FortnoxMcpWrapper.APIError || isJqError(error)) {
+      return asErrorResult(error.message);
+    }
+    throw error;
+  }
+};
+
+export default { metadata, tool, handler };

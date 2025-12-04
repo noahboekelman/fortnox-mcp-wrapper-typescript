@@ -1,0 +1,39 @@
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+import { Metadata, asBinaryContentResult } from 'fortnox-mcp-wrapper-mcp/tools/types';
+
+import { Tool } from '@modelcontextprotocol/sdk/types.js';
+import FortnoxMcpWrapper from 'fortnox-mcp-wrapper';
+
+export const metadata: Metadata = {
+  resource: 'number_3.invoices',
+  operation: 'read',
+  tags: [],
+  httpMethod: 'get',
+  httpPath: '/3/invoices/{DocumentNumber}/print',
+  operationId: 'print',
+};
+
+export const tool: Tool = {
+  name: 'print_number_3_invoices',
+  description: 'Print an invoice',
+  inputSchema: {
+    type: 'object',
+    properties: {
+      DocumentNumber: {
+        type: 'string',
+      },
+    },
+    required: ['DocumentNumber'],
+  },
+  annotations: {
+    readOnlyHint: true,
+  },
+};
+
+export const handler = async (client: FortnoxMcpWrapper, args: Record<string, unknown> | undefined) => {
+  const { DocumentNumber, ...body } = args as any;
+  return asBinaryContentResult(await client.number3.invoices.print(DocumentNumber).asResponse());
+};
+
+export default { metadata, tool, handler };
