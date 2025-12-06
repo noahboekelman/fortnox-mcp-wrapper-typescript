@@ -8,9 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stainless-sdks/fortnox-mcp-wrapper-typescript.git"
+    "url": "git+https://github.com/noahboekelman/fortnox-mcp-wrapper-typescript.git"
   },
-  "homepage": "https://github.com/stainless-sdks/fortnox-mcp-wrapper-typescript/tree/main/packages/mcp-server#readme",
+  "homepage": "https://github.com/noahboekelman/fortnox-mcp-wrapper-typescript/tree/main/packages/mcp-server#readme",
   "server": {
     "type": "node",
     "entry_point": "index.js",
