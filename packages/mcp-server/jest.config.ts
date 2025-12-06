@@ -7,8 +7,8 @@ const config: JestConfigWithTsJest = {
     '^.+\\.(t|j)sx?$': ['@swc/jest', { sourceMaps: 'inline' }],
   },
   moduleNameMapper: {
-    '^fortnox-mcp-wrapper-mcp$': '<rootDir>/src/index.ts',
-    '^fortnox-mcp-wrapper-mcp/(.*)$': '<rootDir>/src/$1',
+    '^fortnox_mcp_wrapper/fortnox-mcp-api$': '<rootDir>/src/index.ts',
+    '^fortnox_mcp_wrapper/fortnox-mcp-api/(.*)$': '<rootDir>/src/$1',
   },
   modulePathIgnorePatterns: ['<rootDir>/dist/'],
   testPathIgnorePatterns: ['scripts'],
