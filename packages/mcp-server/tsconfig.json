@@ -8,8 +8,8 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "paths": {
-      "fortnox-mcp-wrapper-mcp/*": ["./src/*"],
-      "fortnox-mcp-wrapper-mcp": ["./src/index.ts"]
+      "fortnox_mcp_wrapper/fortnox-mcp-api/*": ["./src/*"],
+      "fortnox_mcp_wrapper/fortnox-mcp-api": ["./src/index.ts"]
     },
     "noEmit": true,
 

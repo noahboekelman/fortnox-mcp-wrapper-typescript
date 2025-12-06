@@ -24,7 +24,7 @@ node ./packages/mcp-server/dist/index.js
 ```
 
 > [!NOTE]
-> Once this package is [published to npm](https://www.stainless.com/docs/guides/publish), this will become: `npx -y fortnox-mcp-wrapper-mcp`
+> Once this package is [published to npm](https://www.stainless.com/docs/guides/publish), this will become: `npx -y fortnox_mcp_wrapper/fortnox-mcp-api`
 
 ### Via MCP Client
 
@@ -201,10 +201,10 @@ http://localhost:3000?client=cursor&capability=tool-name-length%3D40
 
 ```js
 // Import the server, generated endpoints, or the init function
-import { server, endpoints, init } from "fortnox-mcp-wrapper-mcp/server";
+import { server, endpoints, init } from "fortnox_mcp_wrapper/fortnox-mcp-api/server";
 
 // import a specific tool
-import listAccountChartsNumber3 from "fortnox-mcp-wrapper-mcp/tools/number-3/list-account-charts-number-3";
+import listAccountChartsNumber3 from "fortnox_mcp_wrapper/fortnox-mcp-api/tools/number-3/list-account-charts-number-3";
 
 // initialize the server and all endpoints
 init({ server, endpoints });

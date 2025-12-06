@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "fortnox-mcp-wrapper-mcp/*": ["./dist/src/*"],
-      "fortnox-mcp-wrapper-mcp": ["./dist/src/index.ts"]
+      "fortnox_mcp_wrapper/fortnox-mcp-api/*": ["./dist/src/*"],
+      "fortnox_mcp_wrapper/fortnox-mcp-api": ["./dist/src/index.ts"]
     },
     "noEmit": false,
     "declaration": true,
