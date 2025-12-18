@@ -35,7 +35,10 @@ export async function codeTool() {
       headers: {
         ...(stainlessAPIKey && { Authorization: stainlessAPIKey }),
         'Content-Type': 'application/json',
-        client_envs: JSON.stringify({ FORTNOX_MCP_WRAPPER_API_KEY: readEnv('FORTNOX_MCP_WRAPPER_API_KEY') }),
+        client_envs: JSON.stringify({
+          FORTNOX_MCP_WRAPPER_API_KEY: readEnv('FORTNOX_MCP_WRAPPER_API_KEY'),
+          FORTNOX_MCP_WRAPPER_BASE_URL: readEnv('FORTNOX_MCP_WRAPPER_BASE_URL'),
+        }),
       },
       body: JSON.stringify({
         project_name: 'fortnox-mcp-wrapper',
