@@ -87,7 +87,11 @@ describe('resource archive', () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
       client.number3.archive.uploadFile(
-        { folderid: 'folderid', path: 'path', file: {} },
+        {
+          folderid: 'folderid',
+          path: 'path',
+          file: {},
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(FortnoxMcpWrapper.NotFoundError);

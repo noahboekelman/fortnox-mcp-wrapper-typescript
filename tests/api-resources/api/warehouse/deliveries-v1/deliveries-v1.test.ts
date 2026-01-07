@@ -25,7 +25,11 @@ describe('resource deliveriesV1', () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
       client.api.warehouse.deliveriesV1.retrieveDeliveriesV1(
-        { itemId: 'itemId', state: 'all', type: 'all' },
+        {
+          itemId: 'itemId',
+          state: 'all',
+          type: 'all',
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(FortnoxMcpWrapper.NotFoundError);

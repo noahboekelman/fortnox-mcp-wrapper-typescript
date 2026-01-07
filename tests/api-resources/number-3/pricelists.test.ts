@@ -23,7 +23,13 @@ describe('resource pricelists', () => {
   // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.number3.pricelists.create({
-      PriceList: { Code: 'x', Description: 'x', '@url': '@url', Comments: 'Comments', PreSelected: true },
+      PriceList: {
+        Code: 'x',
+        Description: 'x',
+        '@url': '@url',
+        Comments: 'Comments',
+        PreSelected: true,
+      },
     });
   });
 
@@ -56,7 +62,13 @@ describe('resource pricelists', () => {
   // Prism tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.number3.pricelists.update('Code', {
-      PriceList: { Code: 'x', Description: 'x', '@url': '@url', Comments: 'Comments', PreSelected: true },
+      PriceList: {
+        Code: 'x',
+        Description: 'x',
+        '@url': '@url',
+        Comments: 'Comments',
+        PreSelected: true,
+      },
     });
   });
 

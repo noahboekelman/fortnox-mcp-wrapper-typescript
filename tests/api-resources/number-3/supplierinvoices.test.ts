@@ -83,7 +83,14 @@ describe('resource supplierinvoices', () => {
             VAT: 'VAT',
             VATType: 'NORMAL',
             VoucherNumber: 0,
-            Vouchers: [{ Number: 0, ReferenceType: 'ReferenceType', Series: 'Series', Year: 0 }],
+            Vouchers: [
+              {
+                Number: 0,
+                ReferenceType: 'ReferenceType',
+                Series: 'Series',
+                Year: 0,
+              },
+            ],
             VoucherSeries: 'VoucherSeries',
             VoucherYear: 0,
             YourReference: 'YourReference',
@@ -182,7 +189,14 @@ describe('resource supplierinvoices', () => {
             VAT: 'VAT',
             VATType: 'NORMAL',
             VoucherNumber: 0,
-            Vouchers: [{ Number: 0, ReferenceType: 'ReferenceType', Series: 'Series', Year: 0 }],
+            Vouchers: [
+              {
+                Number: 0,
+                ReferenceType: 'ReferenceType',
+                Series: 'Series',
+                Year: 0,
+              },
+            ],
             VoucherSeries: 'VoucherSeries',
             VoucherYear: 0,
             YourReference: 'YourReference',

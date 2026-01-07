@@ -38,7 +38,13 @@ describe('resource predefinedvoucherseries', () => {
     await expect(
       client.number3.predefinedvoucherseries.update(
         'Name',
-        { PreDefinedVoucherSeries: { VoucherSeries: 'x', '@url': '@url', Name: 'Name' } },
+        {
+          PreDefinedVoucherSeries: {
+            VoucherSeries: 'x',
+            '@url': '@url',
+            Name: 'Name',
+          },
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(FortnoxMcpWrapper.NotFoundError);

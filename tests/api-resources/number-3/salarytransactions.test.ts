@@ -11,7 +11,11 @@ describe('resource salarytransactions', () => {
   // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.number3.salarytransactions.create({
-      SalaryTransaction: { Date: '2019-12-27', EmployeeId: 'EmployeeId', SalaryCode: 'SalaryCode' },
+      SalaryTransaction: {
+        Date: '2019-12-27',
+        EmployeeId: 'EmployeeId',
+        SalaryCode: 'SalaryCode',
+      },
     });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
@@ -57,7 +61,11 @@ describe('resource salarytransactions', () => {
   // Prism tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.number3.salarytransactions.update(0, {
-      SalaryTransaction: { Date: '2019-12-27', EmployeeId: 'EmployeeId', SalaryCode: 'SalaryCode' },
+      SalaryTransaction: {
+        Date: '2019-12-27',
+        EmployeeId: 'EmployeeId',
+        SalaryCode: 'SalaryCode',
+      },
     });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);

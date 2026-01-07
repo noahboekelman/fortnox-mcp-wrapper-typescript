@@ -25,7 +25,11 @@ describe('resource articlefileconnections', () => {
   // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.number3.articlefileconnections.create({
-      ArticleFileConnection: { ArticleNumber: 'ArticleNumber', FileId: 'FileId', '@url': '@url' },
+      ArticleFileConnection: {
+        ArticleNumber: 'ArticleNumber',
+        FileId: 'FileId',
+        '@url': '@url',
+      },
     });
   });
 

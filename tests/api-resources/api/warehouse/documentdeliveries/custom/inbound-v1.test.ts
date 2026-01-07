@@ -70,7 +70,11 @@ describe('resource inboundV1', () => {
         },
       ],
       body_id: '269125115713',
-      currency: { currency: 'xxx', rate: 0.000001, unit: 1 },
+      currency: {
+        currency: 'xxx',
+        rate: 0.000001,
+        unit: 1,
+      },
       note: 'note',
       body_type: 'type',
       voided: true,

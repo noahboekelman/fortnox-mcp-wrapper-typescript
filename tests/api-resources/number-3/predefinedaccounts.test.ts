@@ -37,7 +37,11 @@ describe('resource predefinedaccounts', () => {
   // Prism tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.number3.predefinedaccounts.update('name', {
-      PreDefinedAccount: { Account: 1000, '@url': '@url', Name: 'Name' },
+      PreDefinedAccount: {
+        Account: 1000,
+        '@url': '@url',
+        Name: 'Name',
+      },
     });
   });
 
