@@ -39,7 +39,11 @@ describe('resource customers', () => {
             CountryCode: 'xx',
             Currency: 'xxx',
             CustomerNumber: 'CustomerNumber',
-            DefaultDeliveryTypes: { Invoice: 'PRINT', Offer: 'PRINT', Order: 'PRINT' },
+            DefaultDeliveryTypes: {
+              Invoice: 'PRINT',
+              Offer: 'PRINT',
+              Order: 'PRINT',
+            },
             DefaultTemplates: {
               CashInvoice: 'CashInvoice',
               Invoice: 'Invoice',
@@ -147,7 +151,11 @@ describe('resource customers', () => {
             CountryCode: 'xx',
             Currency: 'xxx',
             CustomerNumber: 'CustomerNumber',
-            DefaultDeliveryTypes: { Invoice: 'PRINT', Offer: 'PRINT', Order: 'PRINT' },
+            DefaultDeliveryTypes: {
+              Invoice: 'PRINT',
+              Offer: 'PRINT',
+              Order: 'PRINT',
+            },
             DefaultTemplates: {
               CashInvoice: 'CashInvoice',
               Invoice: 'Invoice',

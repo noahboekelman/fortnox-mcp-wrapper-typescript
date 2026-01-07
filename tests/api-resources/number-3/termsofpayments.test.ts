@@ -25,7 +25,11 @@ describe('resource termsofpayments', () => {
   // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.number3.termsofpayments.create({
-      TermsOfPayment: { Code: 'x', Description: 'Description', '@url': '@url' },
+      TermsOfPayment: {
+        Code: 'x',
+        Description: 'Description',
+        '@url': '@url',
+      },
     });
   });
 
@@ -58,7 +62,11 @@ describe('resource termsofpayments', () => {
   // Prism tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.number3.termsofpayments.update('Code', {
-      TermsOfPayment: { Code: 'x', Description: 'Description', '@url': '@url' },
+      TermsOfPayment: {
+        Code: 'x',
+        Description: 'Description',
+        '@url': '@url',
+      },
     });
   });
 

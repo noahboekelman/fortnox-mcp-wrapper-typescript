@@ -25,7 +25,15 @@ describe('resource costcenters', () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
       client.number3.costcenters.create(
-        { CostCenter: { Code: 'x', Description: 'x', '@url': '@url', Active: true, Note: 'Note' } },
+        {
+          CostCenter: {
+            Code: 'x',
+            Description: 'x',
+            '@url': '@url',
+            Active: true,
+            Note: 'Note',
+          },
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(FortnoxMcpWrapper.NotFoundError);
@@ -61,7 +69,15 @@ describe('resource costcenters', () => {
     await expect(
       client.number3.costcenters.update(
         'Code',
-        { CostCenter: { Code: 'x', Description: 'x', '@url': '@url', Active: true, Note: 'Note' } },
+        {
+          CostCenter: {
+            Code: 'x',
+            Description: 'x',
+            '@url': '@url',
+            Active: true,
+            Note: 'Note',
+          },
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(FortnoxMcpWrapper.NotFoundError);

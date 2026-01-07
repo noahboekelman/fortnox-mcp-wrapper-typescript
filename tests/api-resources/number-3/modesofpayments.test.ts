@@ -25,7 +25,12 @@ describe('resource modesofpayments', () => {
   // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.number3.modesofpayments.create({
-      ModeOfPayment: { AccountNumber: 'xxxx', '@url': '@url', Code: 'Code', Description: 'Description' },
+      ModeOfPayment: {
+        AccountNumber: 'xxxx',
+        '@url': '@url',
+        Code: 'Code',
+        Description: 'Description',
+      },
     });
   });
 
@@ -58,7 +63,12 @@ describe('resource modesofpayments', () => {
   // Prism tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.number3.modesofpayments.update('Code', {
-      ModeOfPayment: { AccountNumber: 'xxxx', '@url': '@url', Code: 'Code', Description: 'Description' },
+      ModeOfPayment: {
+        AccountNumber: 'xxxx',
+        '@url': '@url',
+        Code: 'Code',
+        Description: 'Description',
+      },
     });
   });
 

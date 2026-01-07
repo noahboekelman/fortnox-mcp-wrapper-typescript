@@ -23,7 +23,12 @@ describe('resource units', () => {
   // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.number3.units.create({
-      Unit: { Code: 'x', Description: 'x', '@url': '@url', CodeEnglish: 'CodeEnglish' },
+      Unit: {
+        Code: 'x',
+        Description: 'x',
+        '@url': '@url',
+        CodeEnglish: 'CodeEnglish',
+      },
     });
   });
 
@@ -54,7 +59,12 @@ describe('resource units', () => {
   // Prism tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.number3.units.update('Code', {
-      Unit: { Code: 'x', Description: 'x', '@url': '@url', CodeEnglish: 'CodeEnglish' },
+      Unit: {
+        Code: 'x',
+        Description: 'x',
+        '@url': '@url',
+        CodeEnglish: 'CodeEnglish',
+      },
     });
   });
 
