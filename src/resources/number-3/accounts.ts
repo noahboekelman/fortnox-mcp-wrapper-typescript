@@ -203,7 +203,7 @@ export interface AccountCreateParams {
   financialyear?: number;
 
   /**
-   * Body param:
+   * Body param
    */
   Account?: FortnoxAccountPayload;
 }
@@ -215,7 +215,7 @@ export interface AccountUpdateParams {
   financialyear?: number;
 
   /**
-   * Body param:
+   * Body param
    */
   Account?: FortnoxAccountPayload;
 }

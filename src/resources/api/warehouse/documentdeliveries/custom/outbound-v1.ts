@@ -145,52 +145,52 @@ export interface OutboundV1UpdateParams {
   type: string;
 
   /**
-   * Body param:
+   * Body param
    */
   date: string;
 
   /**
-   * Body param:
+   * Body param
    */
   deliveryState: 'registration' | 'reservation' | 'delivery';
 
   /**
-   * Body param:
+   * Body param
    */
   rows: Array<OutboundV1UpdateParams.Row>;
 
   /**
-   * Body param:
+   * Body param
    */
   body_id?: string;
 
   /**
-   * Body param:
+   * Body param
    */
   averageCosts?: Array<OutboundV1UpdateParams.AverageCost>;
 
   /**
-   * Body param:
+   * Body param
    */
   forcedDelivery?: boolean;
 
   /**
-   * Body param:
+   * Body param
    */
   note?: string;
 
   /**
-   * Body param:
+   * Body param
    */
   referenceType?: string;
 
   /**
-   * Body param:
+   * Body param
    */
   voided?: boolean;
 
   /**
-   * Body param:
+   * Body param
    */
   warehouseReady?: boolean;
 }
