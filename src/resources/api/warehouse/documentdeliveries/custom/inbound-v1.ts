@@ -151,42 +151,42 @@ export interface InboundV1UpdateParams {
   path_type: string;
 
   /**
-   * Body param:
+   * Body param
    */
   date: string;
 
   /**
-   * Body param:
+   * Body param
    */
   rows: Array<InboundV1UpdateParams.Row>;
 
   /**
-   * Body param:
+   * Body param
    */
   body_id?: string;
 
   /**
-   * Body param:
+   * Body param
    */
   currency?: InboundV1UpdateParams.Currency;
 
   /**
-   * Body param:
+   * Body param
    */
   note?: string;
 
   /**
-   * Body param:
+   * Body param
    */
   body_type?: string;
 
   /**
-   * Body param:
+   * Body param
    */
   voided?: boolean;
 
   /**
-   * Body param:
+   * Body param
    */
   warehouseReady?: boolean;
 }
