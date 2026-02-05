@@ -1,6 +1,6 @@
 {
   "name": "fortnox-mcp-wrapper",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "The official TypeScript library for the Fortnox Mcp Wrapper API",
   "author": "Fortnox Mcp Wrapper <>",
   "types": "dist/index.d.ts",
