@@ -49,7 +49,11 @@ describe('resource inbox', () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
       client.number3.inbox.upload(
-        { folderId: 'folderId', path: 'path', file: {} },
+        {
+          folderId: 'folderId',
+          path: 'path',
+          file: {},
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(FortnoxMcpWrapper.NotFoundError);

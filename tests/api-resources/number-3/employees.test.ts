@@ -48,7 +48,13 @@ describe('resource employees', () => {
             Country: 'Country',
             CurrentCompBalance: 0,
             CurrentFlexBalance: 0,
-            DatedSchedules: [{ EmployeeId: 'x', FirstDay: '2019-12-27', ScheduleId: 'ScheduleId' }],
+            DatedSchedules: [
+              {
+                EmployeeId: 'x',
+                FirstDay: '2019-12-27',
+                ScheduleId: 'ScheduleId',
+              },
+            ],
             DatedWages: [
               {
                 EmployeeId: 'x',
@@ -225,7 +231,13 @@ describe('resource employees', () => {
             Country: 'Country',
             CurrentCompBalance: 0,
             CurrentFlexBalance: 0,
-            DatedSchedules: [{ EmployeeId: 'x', FirstDay: '2019-12-27', ScheduleId: 'ScheduleId' }],
+            DatedSchedules: [
+              {
+                EmployeeId: 'x',
+                FirstDay: '2019-12-27',
+                ScheduleId: 'ScheduleId',
+              },
+            ],
             DatedWages: [
               {
                 EmployeeId: 'x',

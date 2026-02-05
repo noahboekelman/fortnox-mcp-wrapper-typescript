@@ -95,7 +95,11 @@ describe('resource noxfinansinvoices', () => {
     await expect(
       client.number3.noxfinansinvoices.send(
         {
-          NoxFinansInvoice: { InvoiceNumber: 'InvoiceNumber', SendMethod: 'SendMethod', Service: 'Service' },
+          NoxFinansInvoice: {
+            InvoiceNumber: 'InvoiceNumber',
+            SendMethod: 'SendMethod',
+            Service: 'Service',
+          },
         },
         { path: '/_stainless_unknown_path' },
       ),

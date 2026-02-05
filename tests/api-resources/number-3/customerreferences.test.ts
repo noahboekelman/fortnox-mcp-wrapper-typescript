@@ -25,7 +25,13 @@ describe('resource customerreferences', () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
       client.number3.customerreferences.create(
-        { CustomerReferenceRow: { CustomerNumber: 'CustomerNumber', Id: 0, Reference: 'Reference' } },
+        {
+          CustomerReferenceRow: {
+            CustomerNumber: 'CustomerNumber',
+            Id: 0,
+            Reference: 'Reference',
+          },
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(FortnoxMcpWrapper.NotFoundError);
@@ -61,7 +67,13 @@ describe('resource customerreferences', () => {
     await expect(
       client.number3.customerreferences.update(
         'CustomerReferenceRowId',
-        { CustomerReferenceRow: { CustomerNumber: 'CustomerNumber', Id: 0, Reference: 'Reference' } },
+        {
+          CustomerReferenceRow: {
+            CustomerNumber: 'CustomerNumber',
+            Id: 0,
+            Reference: 'Reference',
+          },
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(FortnoxMcpWrapper.NotFoundError);

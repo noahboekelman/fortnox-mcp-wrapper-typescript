@@ -88,7 +88,7 @@ export interface ScheduletimeUpdateParams {
   EmployeeId: string;
 
   /**
-   * Body param:
+   * Body param
    */
   ScheduleTime?: ScheduletimeUpdateParams.ScheduleTime;
 }

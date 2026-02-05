@@ -163,7 +163,7 @@ export interface VoucherCreateParams {
   financialyear?: number;
 
   /**
-   * Body param:
+   * Body param
    */
   Voucher?: VoucherCreateParams.Voucher;
 }

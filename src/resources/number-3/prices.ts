@@ -168,7 +168,7 @@ export interface PriceUpdateParams {
   ArticleNumber: string;
 
   /**
-   * Body param:
+   * Body param
    */
   Price?: FortnoxPrice;
 }
@@ -206,7 +206,7 @@ export interface PriceUpdateFirstParams {
   PriceList: string;
 
   /**
-   * Body param:
+   * Body param
    */
   Price?: FortnoxPrice;
 }

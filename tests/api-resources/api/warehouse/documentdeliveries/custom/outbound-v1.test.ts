@@ -70,7 +70,11 @@ describe('resource outboundV1', () => {
       ],
       body_id: '269125115713',
       averageCosts: [
-        { averageCostInSEK: 0, itemId: 'itemId', stockPointId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e' },
+        {
+          averageCostInSEK: 0,
+          itemId: 'itemId',
+          stockPointId: '182bd5e5-6e1a-4fe4-a799-aa6d9a6ab26e',
+        },
       ],
       forcedDelivery: true,
       note: 'note',

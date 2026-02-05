@@ -190,7 +190,13 @@ describe('resource assets', () => {
     await expect(
       client.number3.assets.scrap(
         'GivenNumber',
-        { Asset: { Comment: 'Comment', Date: 'Date', Percentage: 0 } },
+        {
+          Asset: {
+            Comment: 'Comment',
+            Date: 'Date',
+            Percentage: 0,
+          },
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(FortnoxMcpWrapper.NotFoundError);
@@ -214,7 +220,14 @@ describe('resource assets', () => {
     await expect(
       client.number3.assets.sell(
         'GivenNumber',
-        { Asset: { Comment: 'Comment', Date: 'Date', Percentage: 0, Price: 0 } },
+        {
+          Asset: {
+            Comment: 'Comment',
+            Date: 'Date',
+            Percentage: 0,
+            Price: 0,
+          },
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(FortnoxMcpWrapper.NotFoundError);
@@ -238,7 +251,13 @@ describe('resource assets', () => {
     await expect(
       client.number3.assets.writeDown(
         'GivenNumber',
-        { Asset: { Amount: 0, Comment: 'Comment', Date: 'Date' } },
+        {
+          Asset: {
+            Amount: 0,
+            Comment: 'Comment',
+            Date: 'Date',
+          },
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(FortnoxMcpWrapper.NotFoundError);
@@ -262,7 +281,13 @@ describe('resource assets', () => {
     await expect(
       client.number3.assets.writeUp(
         'GivenNumber',
-        { Asset: { Amount: 0, Comment: 'Comment', Date: 'Date' } },
+        {
+          Asset: {
+            Amount: 0,
+            Comment: 'Comment',
+            Date: 'Date',
+          },
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(FortnoxMcpWrapper.NotFoundError);
